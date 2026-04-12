@@ -51,8 +51,8 @@ public class GameController {
 
     // PUT request updates a game
     @PutMapping("/{id}")
-    public GameResponse updateGame(@PathVariable UUID id, @RequestBody GameRequest game) {
-        return gameService.updateGame(id, game.pityLimit());
+    public ResponseEntity<GameResponse> updateGame(@PathVariable UUID id, @RequestBody GameRequest game) {
+        return ResponseEntity.ok(gameService.updateGame(id, game));
     }
 
     // DELETE request deletes a game

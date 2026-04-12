@@ -70,16 +70,19 @@ public class GameService {
 
     // updates pity limit
     @Transactional
-    public GameResponse updateGame(UUID id, int pityLimit) {
+    public GameResponse updateGame(UUID id, GameRequest request) {
         // fetch the game by id
         Game game = gameRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Game not found with id: " + id));
         
         // modify the field
-        game.setPityLimit(pityLimit);
+        game.setName(request.name());
+        game.setCurrencyName(request.currencyName());
+        game.setPityLimit(request.pityLimit());
+        game.setCurrencyPerPull(request.currencyPerPull());
+        game.setDailyIncome(request.dailyIncome());
 
         // return the repository
-        Game savedGame = gameRepository.save(game);
-        return toResponse(savedGame);
+        return toResponse(gameRepository.save(game));
     }
 
     // grab all games
