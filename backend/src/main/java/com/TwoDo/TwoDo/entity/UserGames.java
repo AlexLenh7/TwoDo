@@ -38,8 +38,8 @@ public class UserGames {
 
     public UserGames() {}
 
-    public UserGames(int totalCurrency, int currentPityCharacter, int currentPityWeapon, User user, Game game) {
-        this.currentCurrency = totalCurrency;
+    public UserGames(int currentCurrency, int currentPityCharacter, int currentPityWeapon, User user, Game game) {
+        this.currentCurrency = currentCurrency;
         this.currentPityCharacter = currentPityCharacter;
         this.currentPityWeapon = currentPityWeapon;
         this.user = user;
