@@ -28,13 +28,13 @@ public class UserGamesController {
         this.userGamesService = userGamesService;
     }
 
-    // GET request returns game by user id
+    // GET request returns game by userId
     @GetMapping
     public List<UserGamesResponse> getUserGamesByUser(@PathVariable UUID userId) {
         return userGamesService.getUserGamesByUser(userId);
     }
 
-    // GET request returns game with id
+    // GET request returns game with gameId
     @GetMapping("/{id}")
     public ResponseEntity<UserGamesResponse> getUserGamesById(@PathVariable UUID id) {
         return userGamesService.getUserGamesById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());

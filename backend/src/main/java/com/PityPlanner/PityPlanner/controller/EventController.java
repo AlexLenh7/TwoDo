@@ -50,7 +50,7 @@ public class EventController {
 
     // GET request returns event by active
     @GetMapping("/active")
-    public List<EventResponse> getActiveEvent() {
+    public List<EventResponse> getActiveEvents() {
         return eventService.getActiveEvents();
     }
 
