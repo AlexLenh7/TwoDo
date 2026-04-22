@@ -52,6 +52,8 @@ public class BannerService {
             banner.getGame().getName(),
             banner.getCharacterName(),
             banner.getBannerType(),
+            banner.getIsLimited(),
+            banner.getIsRerun(),
             banner.getStartDate(),
             banner.getEndDate()
         );
@@ -96,6 +98,8 @@ public class BannerService {
 
         banner.setCharacterName(request.characterName());
         banner.setBannerType(request.bannerType());
+        banner.setIsLimited(request.isLimited());
+        banner.setIsRerun(request.isRerun());
         banner.setEndDate(request.endDate());
         banner.setStartDate(request.startDate());
         banner.setGame(game);

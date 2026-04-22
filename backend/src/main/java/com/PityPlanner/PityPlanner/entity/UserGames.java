@@ -36,6 +36,9 @@ public class UserGames {
     // Current pity for character weapon
     private int currentPityWeapon;
 
+    // current pity Limit for that game
+    private int pityLimit;
+
     public UserGames() {}
 
     public UserGames(int currentCurrency, int currentPityCharacter, int currentPityWeapon, User user, Game game) {
@@ -93,5 +96,13 @@ public class UserGames {
 
     public void setCurrentPityCharacter(int currentPityCharacter) {
         this.currentPityCharacter = currentPityCharacter;
+    }
+
+    public int getPityLimit() {
+        return pityLimit;
+    }
+
+    public void setPityLimit(int pityLimit) {
+        this.pityLimit = pityLimit;
     }
 }

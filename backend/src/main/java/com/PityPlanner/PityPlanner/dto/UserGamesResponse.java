@@ -10,5 +10,6 @@ public record UserGamesResponse (
     String currencyName,
     int currentCurrency,
     int currentPityCharacter,
-    int currentPityWeapon
+    int currentPityWeapon,
+    int pityLimit
 ) {}

@@ -26,10 +26,14 @@ public class Banner {
 
     @OneToMany(mappedBy = "banner")
     private List<Tracking> tracking = new ArrayList<>();
-
+    
     // Weapon or Character
     @Column(length=50)
     private String bannerType;
+    
+    // Banner limited or rerun
+    Boolean isLimited;
+    Boolean isRerun;
 
     // Name of the character
     private String characterName;
@@ -97,5 +101,21 @@ public class Banner {
 
     public void setBannerType(String bannerType) {
         this.bannerType = bannerType;
+    }
+
+    public Boolean getIsLimited() {
+        return isLimited;
+    }
+
+    public void setIsLimited(Boolean isLimited) {
+        this.isLimited = isLimited;
+    }
+
+    public Boolean getIsRerun() {
+        return isRerun;
+    }
+
+    public void setIsRerun(Boolean isRerun) {
+        this.isRerun = isRerun;
     }
 }

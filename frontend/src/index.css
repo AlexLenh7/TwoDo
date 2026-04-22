@@ -7,7 +7,12 @@
   font-weight: 500;
 }
 
-/* Choose a different color theme? */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @theme {
   --color-text: var(--brand-text);
   --color-sub-text: var(--brand-sub-text);
@@ -29,15 +34,4 @@
   --brand-bg-dark: oklch(25.066% 0.01612 252.481);
   --brand-bg-light: oklch(32.546% 0.02674 262.597);
   --brand-secondary: oklch(79.519% 0.16532 69.523);
-}
-
-[data-theme="default-light"] {
-  --brand-text: oklch(27.817% 0.019 272.016);
-  --brand-sub-text: oklch(50% 0.04 271);
-  --brand-primary: oklch(64.479% 0.18972 262.213);
-  --brand-primary-dark: oklch(74.479% 0.18972 262.213);
-  --brand-bg: oklch(89.253% 0.01255 276.048);
-  --brand-bg-dark: oklch(80.416% 0.02348 271.982);
-  --brand-bg-light: oklch(85.416% 0.02348 271.982);
-  --brand-secondary: oklch(70.744% 0.13895 57.105);
 }

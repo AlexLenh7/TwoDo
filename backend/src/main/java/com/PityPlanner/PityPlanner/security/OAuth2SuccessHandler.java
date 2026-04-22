@@ -2,6 +2,7 @@ package com.PityPlanner.PityPlanner.security;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
@@ -18,6 +19,9 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 
     private final JwtUtil jwtUtil;
     private final UserService userService;
+
+    @Value("${app.frontend-url:http://localhost:5173}")
+    private String frontendUrl;
 
     public OAuth2SuccessHandler(JwtUtil jwtUtil, UserService userService) {
         this.jwtUtil = jwtUtil;
@@ -40,8 +44,8 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 
         String token = jwtUtil.generateToken(email, user.getId().toString());
 
-        // Redirect to frontend with token — update this URL to match your frontend
-        String redirectUrl = "http://localhost:5173/auth/callback?token=" + token;
+        // Redirect to frontend with token
+        String redirectUrl = frontendUrl + "/auth/callback?token=" + token;
         response.sendRedirect(redirectUrl);
     }
 }

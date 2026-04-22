@@ -63,7 +63,8 @@ public class UserGamesService {
             userGames.getGame().getCurrencyName(),
             userGames.getCurrentCurrency(),
             userGames.getCurrentPityCharacter(),
-            userGames.getCurrentPityWeapon()
+            userGames.getCurrentPityWeapon(),
+            userGames.getPityLimit()
         );
     }
 

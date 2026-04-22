@@ -9,6 +9,8 @@ public record BannerResponse(
     String gameName,
     String characterName,
     String bannerType,
+    Boolean isLimited,
+    Boolean isRerun,
     LocalDateTime startDate,
     LocalDateTime endDate
 ) {}

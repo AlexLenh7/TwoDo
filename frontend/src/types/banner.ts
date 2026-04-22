@@ -10,6 +10,8 @@ export interface BannerResponse {
   id: string;
   gameId: string;
   gameName: string;
+  isLimited: boolean;
+  isRerun: boolean;
   characterName: string;
   bannerType: string;
   startDate: string;

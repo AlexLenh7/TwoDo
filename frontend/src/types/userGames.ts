@@ -14,4 +14,5 @@ export interface UserGamesResponse {
   currentCurrency: number;
   currentPityCharacter: number;
   currentPityWeapon: number;
+  pityLimit: number;
 }

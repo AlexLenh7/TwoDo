@@ -6,5 +6,6 @@ public record UserGamesRequest (
     UUID gameId,
     int currentCurrency,
     int currentPityCharacter,
-    int currentPityWeapon
+    int currentPityWeapon,
+    int pityLimit
 ) {}

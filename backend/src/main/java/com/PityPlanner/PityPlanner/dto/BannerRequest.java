@@ -7,6 +7,8 @@ public record BannerRequest(
     UUID gameId,
     String characterName,
     String bannerType,
+    Boolean isLimited,
+    Boolean isRerun,
     LocalDateTime startDate,
     LocalDateTime endDate
 ) {}
